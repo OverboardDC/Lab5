@@ -1,33 +1,39 @@
 package com.training.homework.view;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
+
 public interface TextConstants {
 
-    String GREETING = "Welcome to the program! Please choose the menu option";
-    String MESSAGES_LIST_HEADING = "The list of messages";
-    String MESSAGE_HAS_BEEN_ADDED = "The message has been successfully added";
-    String SELECT_MESSAGE_EDIT = "Select the message id to edit";
-    String MESSAGE_HAS_BEEN_EDITED = "The message has been successfully edited";
-    String SELECT_MESSAGE_REMOVE = "Select the message id to remove";
-    String MESSAGE_HES_BEEN_REMOVED = "The message has been successfully removed";
+    ResourceBundle bundle = ResourceBundle.getBundle(GlobalConstants.GLOBAL_MESSAGES_BUNDLE_NAME,
+            new Locale(GlobalConstants.GLOBAL_LANGUAGE));
 
-    String MENU_HEADING = "Menu";
-    String MENU_VIEW_MESSAGES = "View messages";
-    String MENU_ADD_MESSAGE = "Add new message";
-    String MENU_EDIT_MESSAGE = "Edit message";
-    String MENU_REMOVE_MESSAGE = "Remove message";
-    String MENU_EXIT = "Exit";
+    String GREETING = bundle.getString("greeting");
+    String MESSAGES_LIST_HEADING = bundle.getString("messages.list.heading");
+    String MESSAGE_HAS_BEEN_ADDED = bundle.getString("message.has.been.added");
+    String SELECT_MESSAGE_EDIT = bundle.getString("select.message.edit");
+    String MESSAGE_HAS_BEEN_EDITED = bundle.getString("message.has.been.edited");
+    String SELECT_MESSAGE_REMOVE = bundle.getString("select.message.remove");
+    String MESSAGE_HES_BEEN_REMOVED = bundle.getString("message.has.been.removed");
 
-    String INPUT_FIELD = "Input field";
-    String WRONG_INPUT = "Your input is incorrect";
-    String THE_LIST_IS_EMPTY = "There are no messages in the list";
+    String MENU_HEADING = bundle.getString("menu.heading");
+    String MENU_VIEW_MESSAGES = bundle.getString("menu,view.messages");
+    String MENU_ADD_MESSAGE = bundle.getString("menu.add.message");
+    String MENU_EDIT_MESSAGE = bundle.getString("menu.edit.message");
+    String MENU_REMOVE_MESSAGE = bundle.getString("menu.remove.message");
+    String MENU_EXIT = bundle.getString("menu.exit");
 
-    String MESSAGE_HEADING = "Message";
-    String ID_FIELD = "Id";
-    String AUTHOR_FIELD = "Author";
-    String TOPIC_FIELD = "Topic";
-    String TEXT_FIELD = "Text";
-    String CREATION_DATE_TIME = "The date and time of creation";
-    String LAST_EDIT_DATE_TIME = "The date and time of last edit";
+    String INPUT_FIELD = bundle.getString("input.field");
+    String WRONG_INPUT = bundle.getString("wrong.input");
+    String THE_LIST_IS_EMPTY = bundle.getString("the.list.is.empty");
+
+    String MESSAGE_HEADING = bundle.getString("message.heading");
+    String ID_FIELD = bundle.getString("id.field");
+    String AUTHOR_FIELD = bundle.getString("author.field");
+    String TOPIC_FIELD = bundle.getString("topic.field");
+    String TEXT_FIELD = bundle.getString("text.field");
+    String CREATION_DATE_TIME = bundle.getString("creation.date.time");
+    String LAST_EDIT_DATE_TIME = bundle.getString("last.edit.date.time");
 
     String SEPARATOR = "============================================================";
 }

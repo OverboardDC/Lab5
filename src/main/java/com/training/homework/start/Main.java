@@ -4,6 +4,12 @@ import com.training.homework.controller.MenuController;
 import com.training.homework.model.Model;
 import com.training.homework.view.View;
 
+/**
+ * The class which starts the application.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public class Main {
 
     public static void main(String[] args) {

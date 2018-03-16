@@ -5,6 +5,14 @@ import com.training.homework.view.GlobalConstants;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * The regular expression constants for input
+ * validation. Interface uses resource bundle for
+ * localisation.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public interface RegexConstants {
 
     ResourceBundle bundle = ResourceBundle.getBundle(GlobalConstants.GLOBAL_REGEX_BUNDLE_NAME,

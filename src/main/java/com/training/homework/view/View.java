@@ -5,6 +5,14 @@ import com.training.homework.enums.MenuOption;
 
 import java.util.List;
 
+/**
+ * The class which manages the output. Has methods for
+ * every type of output and utility methods for
+ * output message forming.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public class View {
 
     public void printGreeting(){

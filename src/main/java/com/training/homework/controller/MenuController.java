@@ -5,6 +5,14 @@ import com.training.homework.view.View;
 
 import java.util.InputMismatchException;
 
+/**
+ * The class which controls the menu in the program.
+ * Class gets the menu option from user input and
+ * invokes the according method from MessageController
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public class MenuController {
 
     private Model model;
@@ -19,6 +27,10 @@ public class MenuController {
         messageController = new MessageController(model, view);
     }
 
+    /**
+     * This method starts the program and
+     * invokes the menu method
+     */
     public void startProgram() {
         view.printGreeting();
         doOperation();

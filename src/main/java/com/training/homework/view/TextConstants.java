@@ -3,6 +3,13 @@ package com.training.homework.view;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+/**
+ * The text constants for output. Uses resource bundle
+ * for localisation.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public interface TextConstants {
 
     ResourceBundle bundle = ResourceBundle.getBundle(GlobalConstants.GLOBAL_MESSAGES_BUNDLE_NAME,

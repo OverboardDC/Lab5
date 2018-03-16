@@ -3,6 +3,14 @@ package com.training.homework.enums;
 import com.training.homework.view.AdditionalSymbols;
 import com.training.homework.view.TextConstants;
 
+/**
+ * This enum contains menu options(number and name).
+ * Allows to add and remove by necessity new menu options easy and fast,
+ * also allows to output it conveniently.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public enum MenuOption {
 
     VIEW_MESSAGES(1, TextConstants.MENU_VIEW_MESSAGES),

@@ -7,6 +7,13 @@ import com.training.homework.view.View;
 
 import java.util.Date;
 
+/**
+ * This class is controller which has interface
+ * methods for operating with the message.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public class MessageController {
 
     private Model model;
@@ -19,6 +26,10 @@ public class MessageController {
         inputUtilController = new InputUtilController(model, view);
     }
 
+    /**
+     * This method allows user to see
+     * the messages list from the model class.
+     */
     public void viewMessagesList(){
         if(!model.getMessages().isEmpty()) {
             view.printMessagesList(model.getMessages());
@@ -27,11 +38,21 @@ public class MessageController {
         }
     }
 
+    /**
+     * Method adds new message to the list in
+     * the model class.
+     */
     public void addNewMessage(){
         model.addMessage(createNewMessage());
         view.printMessageHasBeenAdded();
     }
 
+    /**
+     * Utility method which creates new message entity
+     * using user input.
+     *
+     * @return returns created message
+     */
     private Message createNewMessage(){
         int id = model.getMessages().size() + 1;
         String author = inputAuthor();
@@ -42,17 +63,21 @@ public class MessageController {
     }
 
     private String inputAuthor(){
-        return inputUtilController.inputStringValue(TextConstants.AUTHOR_FIELD, RegexConstants.MESSAGE_AUTHOR_REGEX);
+        return inputUtilController.inputStringField(TextConstants.AUTHOR_FIELD, RegexConstants.MESSAGE_AUTHOR_REGEX);
     }
 
     private String inputTopic(){
-        return inputUtilController.inputStringValue(TextConstants.TOPIC_FIELD, RegexConstants.MESSAGE_TOPIC_REGEX);
+        return inputUtilController.inputStringField(TextConstants.TOPIC_FIELD, RegexConstants.MESSAGE_TOPIC_REGEX);
     }
 
     private String inputText(){
-        return inputUtilController.inputStringValue(TextConstants.TEXT_FIELD, RegexConstants.MESSAGE_TEXT_REGEX);
+        return inputUtilController.inputStringField(TextConstants.TEXT_FIELD, RegexConstants.MESSAGE_TEXT_REGEX);
     }
 
+    /**
+     * Method removes message from the list
+     * by id from user input
+     */
     public void removeMessage(){
         if(!model.getMessages().isEmpty()) {
             view.printSelectMessageToRemove();
@@ -63,6 +88,10 @@ public class MessageController {
         }
     }
 
+    /**
+     * Method allows to edit the necessary message
+     * by id. Method changes only text of the message.
+     */
     public void editMessage(){
         if(!model.getMessages().isEmpty()) {
             view.printSelectMessageToEdit();

@@ -5,6 +5,14 @@ import com.training.homework.entity.Message;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * The service class which contains the business logic.
+ * Contains methods which are invoked by message controller,
+ * and changes the data accordingly.
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public class Model {
 
     private ArrayList<Message> messages;

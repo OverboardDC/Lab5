@@ -8,6 +8,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * The message entity
+ *
+ * @author Eugene Kushpii
+ * @version 1.0
+ */
 public class Message implements Cloneable {
 
     private int id;
